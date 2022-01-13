@@ -9,7 +9,7 @@ class CreateCategoryController {
     const { name, description } = request.body;
 
     try {
-      this.createCategory.execute({ name, description });
+      await this.createCategory.execute({ name, description });
 
       return response.status(201).send();
     } catch (error) {
